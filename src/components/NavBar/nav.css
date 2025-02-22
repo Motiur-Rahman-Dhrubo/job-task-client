@@ -1,0 +1,43 @@
+.menu-nav li>*:not(ul, .menu-title, details, .btn):active,
+.menu-nav li>*:not(ul, .menu-title, details, .btn).active,
+.menu-nav li>details>summary:active {
+    background-color: transparent;
+    color: black;
+    border-radius: 0px;
+}
+
+.menu-nav li a {
+    position: relative;
+}
+
+.menu-nav li a:hover {
+    background-color: transparent;
+}
+
+.menu-nav li a::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    width: 0%;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease;
+}
+
+.menu-nav li a:hover::after {
+    width: 100%;
+}
+
+.menu-nav li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+
+.btn-ghost:hover {
+    background-color: black;
+    color: white;
+}
